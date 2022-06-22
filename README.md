@@ -1,2 +1,2 @@
 # mapfind
-A simple dynamic map app using google maps API.
+A simple react.js map app using google maps API & various others.
