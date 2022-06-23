@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Header from "./components/Header/Header";
 import Map from "./components/Map/Map";
 import List from "./components/List/List";
+import SearchBar from "./components/SearchBar/SearchBar"
 import ActivityInfo from "./components/ActivityInfo/ActivityInfo";
 
 
@@ -19,12 +20,14 @@ const App = () => {
             justifyContent="center"
             alignItems="center"
             minHeight="10vh"
-            maxWidth="90%"
             >
 
          <Header/>
          </Box>
-         <Grid container spacing={3}             display="flex" justifyContent="center" alignItems="center" >
+
+         <SearchBar/>
+
+         <Grid container spacing={3}  >
             <Grid item xs={12} md={4}>
                 <List/>
             </Grid>
