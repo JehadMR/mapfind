@@ -43,9 +43,9 @@ const Header = () => {
             label="Home"
             icon={<HomeIcon fontSize="small" />}
           />
-          <StyledBreadcrumb component="a" href="#" label="Catalog" />
+          <StyledBreadcrumb component="a" href="#" label="Contact" />
           <StyledBreadcrumb
-            label="Accessories"
+            label="Info"
             deleteIcon={<ExpandMoreIcon />}
             onDelete={handleClick}
           />
