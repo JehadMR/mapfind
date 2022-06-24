@@ -14,7 +14,7 @@ export default makeStyles((theme) => ({
       },
 
     mycard: {
-        margin: '0px 5% 0px',
+        margin: '0px 1% 0px',
         color: 'rgb(0, 114, 229)',
         WebkitBoxAlign: 'center',
         alignItems: 'center',
@@ -26,8 +26,9 @@ export default makeStyles((theme) => ({
         borderRadius: '10px',
         fontFamily: "'IBM Plex Sans', sans-serif",
         padding: '10px',
-        width: '27%',
+        width: '229px',
         paddingLeft: '14px',
+        marginTop: '60px',
 
     },
 

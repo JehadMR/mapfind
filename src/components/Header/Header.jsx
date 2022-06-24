@@ -13,7 +13,9 @@ const Header = () => {
     
       <div className={classes.toolbar}>
         <div className={classes.title}>
+          <div className={classes.titlecontent}>
          <h3>Ma'Hike</h3>
+          </div>
         </div>
         <Box className={classes.searchbox}>
           <div className={classes.bartext}>
