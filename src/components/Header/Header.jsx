@@ -10,7 +10,7 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar className={headerbar}>
       <Toolbar className={classes.toolbar}>
         <div className={classes.title}>
          <h3>Ma'Hike</h3>

@@ -1,6 +1,12 @@
 import { alpha, makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
+
+  headerbar: {
+    position: 'static',
+    height: '48px',
+
+  },
   title: {
     display: 'none',
     [theme.breakpoints.up('sm')]: {
