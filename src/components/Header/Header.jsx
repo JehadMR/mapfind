@@ -1,57 +1,36 @@
-import React from "react";
-import { Autocomplete } from "@react-google-maps/api";
-import { emphasize, styled } from '@mui/material/styles';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Chip from '@mui/material/Chip';
-import HomeIcon from '@mui/icons-material/Home';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import React from 'react';
+import { Autocomplete } from '@react-google-maps/api';
+import { AppBar, Toolbar, Typography, InputBase, Box } from '@material-ui/core';
+import SearchIcon from '@material-ui/icons/Search';
 
+import useStyles from './styles.js';
 
-const StyledBreadcrumb = styled(Chip)(({ theme }) => {
-    const backgroundColor =
-      theme.palette.mode === 'light'
-        ? theme.palette.grey[100]
-        : theme.palette.grey[800];
-    return {
-      backgroundColor,
-      height: theme.spacing(3),
-      color: theme.palette.text.primary,
-      fontWeight: theme.typography.fontWeightRegular,
-      '&:hover, &:focus': {
-        backgroundColor: emphasize(backgroundColor, 0.06),
-      },
-      '&:active': {
-        boxShadow: theme.shadows[1],
-        backgroundColor: emphasize(backgroundColor, 0.12),
-      },
-    };
-  }); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
-  
-  function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-  }
-  
 const Header = () => {
-    return (
-      <div role="presentation" onClick={handleClick}>
-        <Breadcrumbs aria-label="breadcrumb">
-          <StyledBreadcrumb
-            component="a"
-            href="#"
-            label="Home"
-            icon={<HomeIcon fontSize="small" />}
-          />
-          <StyledBreadcrumb component="a" href="#" label="Contact" />
-          <StyledBreadcrumb
-            label="Info"
-            deleteIcon={<ExpandMoreIcon />}
-            onDelete={handleClick}
-          />
-        </Breadcrumbs>
-      </div>
-    );
-  }
+  const classes = useStyles();
+
+  return (
+    <AppBar position="static">
+      <Toolbar className={classes.toolbar}>
+        <div className={classes.title}>
+         <h3>Ma'Hike</h3>
+        </div>
+        <Box className={classes.searchbox}>
+          <div className={classes.bartext}>
+            <h4>Explore Your Nature</h4>
+          </div>
+         {/*    <Autocomplete > */}
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase placeholder="Search…" classes={{ root: classes.inputRoot, input: classes.inputInput }} />
+            </div>
+           {/* </Autocomplete> */}
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Header;
