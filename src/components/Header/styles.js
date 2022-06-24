@@ -59,7 +59,6 @@ export default makeStyles((theme) => ({
     backgroundColor: 'var(--color-bg-toolbar, #2c2c2c)',
     borderBottom: '1px solid var(--color-conditionalborder)',
     display: 'flex',
-    paddingRight: '12px',
     position: 'fixed',
     width: '100%',
     height: '48px',
@@ -68,5 +67,7 @@ export default makeStyles((theme) => ({
     top: '0',
     boxSizing: 'border-box',
     fontFamily: "'IBM Plex Sans', sans-serif",
+    color: '#ffff',
+    padding: '0px 5px 5px',
   },
 }));
