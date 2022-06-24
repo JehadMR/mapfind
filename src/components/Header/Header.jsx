@@ -10,8 +10,8 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <AppBar className={headerbar}>
-      <Toolbar className={classes.toolbar}>
+    
+      <div className={classes.toolbar}>
         <div className={classes.title}>
          <h3>Ma'Hike</h3>
         </div>
@@ -28,8 +28,7 @@ const Header = () => {
             </div>
            {/* </Autocomplete> */}
         </Box>
-      </Toolbar>
-    </AppBar>
+      </div>
   );
 };
 
