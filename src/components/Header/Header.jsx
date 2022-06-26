@@ -3,7 +3,7 @@ import React from 'react';
 import { Autocomplete } from '@react-google-maps/api';
 import { AppBar, Toolbar, Typography, InputBase, Box } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-
+import { GiPlantSeed } from "react-icons/gi";
 import useStyles from './styles.js';
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
       <div className={classes.toolbar}>
         <div className={classes.title}>
           <div className={classes.titlecontent}>
-         <h3>Ma'Hike</h3>
+           <GiPlantSeed className={classes.headerlogo}/> <h3>Ma'Hike</h3>
           </div>
         </div>
         <Box className={classes.searchbox}>

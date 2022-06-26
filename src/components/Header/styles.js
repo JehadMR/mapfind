@@ -14,14 +14,30 @@ export default makeStyles((theme) => ({
     boxSizing: 'content-box',
     borderRight: '1px solid var(--color-border-menu, rgba(0, 0, 0, .2))',
     height: '100%',
-    paddingLeft:'11px', 
     fontWeight: '400',
     fontSize: '0.7rem',
+    '&:hover': {     fill: 'rgba(255, 255, 255, 1)',
+      color: 'rgba(255, 255, 255, 1)',
+      backgroundColor: '#111111'},
+
+
  
   },
 
 
+  titlecontent: {
+    display: 'flex',
+    width: '100%',
+    alignItems: 'center',
 
+  },
+  headerlogo: {
+
+    height: '2em',
+    width: '2em',
+    padding: '9px',
+
+  },
   searchbox: {
     justifyContent: 'space-between',
     display: 'flex',
@@ -42,8 +58,6 @@ export default makeStyles((theme) => ({
 
     display: 'flex',
     height: '42px',
-    marginTop: '4px',
-    boxSizing: 'borderBox',
     alignItems: 'center',
     backgroundColor: '#383838',
     '&:hover': { backgroundColor: '#444444' },
@@ -78,6 +92,6 @@ export default makeStyles((theme) => ({
     boxSizing: 'border-box',
     fontFamily: "'Inter', sans-serif",
     color: '#ffff',
-    padding: '0px 5px 5px',
+    padding: '0px 0px 0px',
   },
 }));
