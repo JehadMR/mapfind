@@ -13,6 +13,11 @@ export default makeStyles((theme) => ({
         display: 'flex', justifyContent: 'center', padding: '5%',
       },
 
+    infogrid: {
+      marginTop: '5em',
+
+    },
+
     mycard: {
         margin: '0px 1% 0px',
         color: 'rgb(0, 114, 229)',
@@ -28,7 +33,6 @@ export default makeStyles((theme) => ({
         padding: '10px',
         width: '229px',
         paddingLeft: '14px',
-        marginTop: '60px',
 
     },
 
