@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Grid}  from '@material-ui/core';
-
+import {FcGlobe } from "react-icons/fc";
 import useStyles from './styles';
 
 
@@ -21,7 +21,7 @@ const InfoBox = () => {
            </div> 
          </Grid>
          <Grid item xs={6}>
-            <h1>HOLA!</h1>
+            <h1>HOLA! <FcGlobe/> </h1>
 
          </Grid>
         </Grid>
