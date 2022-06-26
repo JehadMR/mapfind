@@ -15,6 +15,14 @@ export default makeStyles((theme) => ({
 
     infogrid: {
       marginTop: '5em',
+      backgroundColor: 'var(--color-bg-secondary, #f0f0f0)',
+      padding: '16px 24px 24px',
+      borderRadius: '6px',
+      width: '90%',
+      display: 'flex',
+      alignItems: 'center',
+      marginLeft: '4%',
+      fontFamily: "'IBM Plex Sans', sans-serif",
 
     },
 
@@ -29,7 +37,6 @@ export default makeStyles((theme) => ({
         backgroundColor: 'rgba(243, 246, 249, 0.4)',
         border: '1px solid rgb(224, 227, 231)',
         borderRadius: '10px',
-        fontFamily: "'IBM Plex Sans', sans-serif",
         padding: '10px',
         width: '229px',
         paddingLeft: '14px',

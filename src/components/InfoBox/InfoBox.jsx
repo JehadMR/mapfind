@@ -1,5 +1,6 @@
 import React from 'react';
 import {Box, Grid}  from '@material-ui/core';
+import Button from '@mui/material/Button';
 import {FcGlobe } from "react-icons/fc";
 import useStyles from './styles';
 
@@ -21,7 +22,9 @@ const InfoBox = () => {
            </div> 
          </Grid>
          <Grid item xs={6}>
-            <h1>HOLA! <FcGlobe/> </h1>
+            <h1>LOOK UP HIKING PATHS & ACTIVITES AROUND YOU AND ANYWHERE! <FcGlobe/> </h1>
+            <Button variant="outlined">RANDOM PATH</Button>
+
 
          </Grid>
         </Grid>
