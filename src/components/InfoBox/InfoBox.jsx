@@ -23,7 +23,9 @@ const InfoBox = () => {
          </Grid>
          <Grid item xs={6}>
             <h1>LOOK UP HIKING PATHS & ACTIVITES AROUND YOU AND ANYWHERE! <FcGlobe/> </h1>
-            <Button variant="outlined">RANDOM PATH</Button>
+            <Button variant="outlined"   onClick={() => {
+                                                console.log('change to random path');
+                                            }}>RANDOM PATH</Button>
 
 
          </Grid>

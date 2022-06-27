@@ -18,7 +18,7 @@ const App = () => {
 
          <Header/>
          <InfoBox/>
-         <Grid container spacing={3}  >
+         <Grid container spacing={3} style={{height: "45em", width: '95.7%', paddingTop: '1em'}} >
             <Grid item xs={12} md={4}>
                 <List/>
             </Grid>
