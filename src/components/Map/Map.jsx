@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Paper, Typography, useMediaQuery} from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons';
 import Rating from '@mui/material/Rating';
@@ -16,8 +16,6 @@ const Map = () => {
     const classes = useStyles();
     const isMobile = useMediaQuery('(min-width:600px)');
 
-
-
     const defaultProps = {
         center: {
           lat: 32.817725,
@@ -25,7 +23,15 @@ const Map = () => {
         },
         zoom: 14
       };
-
+     
+      
+        useEffect(() => {
+          if ("geolocation" in navigator) 
+           { navigator.geolocation.getCurrentPosition((position) => {
+            defaultProps.center.lat = position.coords.latitude;
+            defaultProps.center.lng = position.coords.longitude;
+          }); }
+      }, []);
 
       const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
