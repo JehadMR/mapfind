@@ -11,6 +11,7 @@ const containerStyle = {
     borderRadius: '6px',
   };
 
+
 const Map = () => { 
     const classes = useStyles();
     const isMobile = useMediaQuery('(min-width:600px)');
@@ -24,7 +25,6 @@ const Map = () => {
         },
         zoom: 14
       };
-
 
 
       const { isLoaded } = useJsApiLoader({
