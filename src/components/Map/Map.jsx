@@ -53,6 +53,9 @@ const Map = () => {
         zoom={defaultProps.zoom}
         onLoad={onLoad}
         onUnmount={onUnmount}
+        options={''}
+        onChange={''}
+        onChildClick={''}
          >
         <></>
       </GoogleMap>
