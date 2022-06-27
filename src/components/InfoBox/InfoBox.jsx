@@ -23,6 +23,7 @@ const InfoBox = () => {
          </Grid>
          <Grid item xs={6}>
             <h1>LOOK UP HIKING PATHS & ACTIVITES AROUND YOU AND ANYWHERE! <FcGlobe/> </h1>
+            <p className={classes.paragraph}><a href="#">Sign In</a> or <a href="#">Sign Up</a> To Save & Plan Your Adventures, Meet Others With Similar Intrests. </p>
             <Button variant="outlined"   onClick={() => {
                                                 console.log('Suggest a path in a 50KM radius');
                                             }}>RANDOM PATH</Button>

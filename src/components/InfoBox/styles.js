@@ -4,6 +4,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
 
+  parapgraph: {
+   /* fontFamily:"'Inter', sans-serif",*/
+
+  },
+
     search: {
 
         

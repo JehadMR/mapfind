@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 import Map from "./components/Map/Map";
 import List from "./components/List/List";
 import InfoBox from "./components/InfoBox/InfoBox"
-import ActivityInfo from "./components/ActivityInfo/ActivityInfo";
 
 
 
