@@ -18,8 +18,8 @@ const Map = () => {
 
     const defaultProps = {
         center: {
-          lat: 32.817725,
-          lng: 35.210751
+          lat: 47.594721,
+          lng: -122.388424
         },
         zoom: 14
       };
@@ -31,6 +31,10 @@ const Map = () => {
             defaultProps.center.lat = position.coords.latitude;
             defaultProps.center.lng = position.coords.longitude;
           }); }
+          else {
+            defaultProps.center.lat= defaultProps.center.lat;
+            defaultProps.center.lng= defaultProps.center.lng;
+          }
       }, []);
 
       const { isLoaded } = useJsApiLoader({
