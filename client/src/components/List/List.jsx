@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from "@material-ui/core";
 import LocationInfo from "../LocationInfo/LocationInfo";
 import useStyles from "./styles"
@@ -7,17 +7,9 @@ const List = () => {
     const classes = useStyles();
     const [type, setType] = useState('hikepaths');
     const [rating, setRating] = useState('');
-    const places = [
-        {name: 'Jabal Abu Mdawwar' },
-        {name: 'Yellowstone Observatory'},
-        {name: 'Elder Trees Path'},
-        {name: 'Jabal Abu Mdawwar' },
-        {name: 'Mount Hermon'},
-        {name: 'NY State Park'},
-        {name: 'Elder Love Hike' },
-        {name: 'Namib Desert'},
-        {name: 'Vogon Ship'},
-    ]
+ 
+
+
     return(
         <div className={classes.container}>
             <Typography variant="h5">Hiking Paths, Scenary & Nature Observatories Around You</Typography>
@@ -41,13 +33,13 @@ const List = () => {
                 </Select>
             </FormControl>
             <Grid container spacing={3} className={classes.list}>
-                {places?.map((place, i) => (
+               {/* {listOfTrails.map((trail, i) => (
                     <Grid item key={i} xs={12}>
-                       <LocationInfo place={place}/>
+                       <LocationInfo trail={trail}/>
                     </Grid>
-                ))}
+               ))} */}
 
-            </Grid>
+            </Grid> 
         </div>
     );
 }

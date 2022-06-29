@@ -1,8 +1,15 @@
 import React from "react";
 
-const LocationInfo = ({place}) => {
+const LocationInfo = ({trail}) => {
+
     return(
-        <h1>{place.name}</h1>
+        <div>
+        <h1>{trail.name}</h1> 
+        <h2>{trail.location.lat}</h2>
+        <h3>{trail.rating}</h3>
+
+        </div>
+        
     );
 }
 

@@ -15,11 +15,11 @@ const containerStyle = {
 const Map = () => { 
     const classes = useStyles();
     const isMobile = useMediaQuery('(min-width:600px)');
-
+    
     const defaultProps = {
         center: {
-          lat: 47.594721,
-          lng: -122.388424
+          lat: 32.74652229245906,
+          lng: 35.025173386673046
         },
         zoom: 14
       };
