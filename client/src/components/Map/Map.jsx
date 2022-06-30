@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import {Paper, Typography, useMediaQuery} from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons';
 import Rating from '@mui/material/Rating';
@@ -12,30 +12,22 @@ const containerStyle = {
   };
 
 
-const Map = () => { 
+const Map = ({setCoordinates, setBounds, coordinates, mapRef }) => { 
     const classes = useStyles();
     const isMobile = useMediaQuery('(min-width:600px)');
-    
-    const defaultProps = {
-        center: {
-          lat: 32.74652229245906,
-          lng: 35.025173386673046
-        },
-        zoom: 14
-      };
+  
+  
      
       
-        useEffect(() => {
+       {/* useEffect(() => {
           if ("geolocation" in navigator) 
            { navigator.geolocation.getCurrentPosition((position) => {
-            defaultProps.center.lat = position.coords.latitude;
-            defaultProps.center.lng = position.coords.longitude;
+            setCoordinates(position.coords);
           }); }
           else {
-            defaultProps.center.lat= defaultProps.center.lat;
-            defaultProps.center.lng= defaultProps.center.lng;
+            coordinates = coordinates;
           }
-      }, []);
+      }, []);  */}
 
       const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
@@ -45,26 +37,37 @@ const Map = () => {
       const [map, setMap] = React.useState(null)
     
       const onLoad = React.useCallback(function callback(map) {
-        const bounds = new window.google.maps.LatLngBounds(defaultProps.center);
+        const bounds = new window.google.maps.LatLngBounds(mapRef.current);
         map.fitBounds(bounds);
-        setMap(map)
+        setMap(mapRef.current)
       }, [])
     
       const onUnmount = React.useCallback(function callback(map) {
         setMap(null)
       }, [])
 
+    
+    
+      const handleCenterChanged = () => {
+        if (!map) return;
+        const newPos = map.getCenter();
+        console.log('newPos');
+        setCoordinates(newPos);
+        
+         
+      }
+      
     return isLoaded ? (
        <div className={classes.mapContainer}>
         
         <GoogleMap
         mapContainerStyle={containerStyle}
-        center={defaultProps.center}
-        zoom={defaultProps.zoom}
+        center={coordinates}
+        zoom={14}
         onLoad={onLoad}
         onUnmount={onUnmount}
         options={''}
-        onChange={''}
+        onCenterChanged={handleCenterChanged}
         onChildClick={''}
          >
         <></>

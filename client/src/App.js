@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import {CssBaseline, Grid} from "@material-ui/core";
 import Box from '@mui/material/Box';
 import Header from "./components/Header/Header";
@@ -14,8 +14,11 @@ import {getLocationInfo} from "./API/index";
 const App = () => {
 
     const [listOfTrails, setListOfTrails] = useState([]);
-    const [coordinates, setCoordinates] = useState({});
+   
+    const [coordinates, setCoordinates] = useState({lat: 32.74652229245906,
+        lng: 35.025173386673046});
     const [bounds, setBounds] = useState(null);
+    const mapRef = useRef(null);
 
     useEffect(() => {
         getLocationInfo()
@@ -39,7 +42,12 @@ const App = () => {
             </Grid>
 
             <Grid item xs={12} md={8}>
-                <Map/>
+                <Map
+                setCoordinates= {setCoordinates} 
+                setBounds= {setBounds}   
+                coordinates= {coordinates}    
+                mapRef = {mapRef}
+                />
             </Grid>
 
          </Grid>
